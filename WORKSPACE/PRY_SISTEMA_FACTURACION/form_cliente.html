@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA DE FACTURACION</title>
+</head>
+<body>
+    <header>
+        <h1>SISTEMA DE FACTURACION CLIENTE</h1>
+        
+    </header>
+   <main>
+    <form action="producto.html" method="get">
+        <table border="1" width="80%">
+                <th colspan="6">DATOS DEL CLIENTE</th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="cedula">CI - RUC</label><br>
+                    <input type="search" id="cedula" name="cedula" placeholder="Ingrese su número de cédula" style="width:95%; padding:6px;">
+                </th>
+
+                <th>
+                    <label for="nombre">Nombres</label><br>
+                    <input type="text" id="nombre" name="nombre" placeholder="Edgar Damián" style="width:95%; padding:6px;">
+                </th>
+
+                <th>
+                    <label for="apellido">Apellidos</label><br>
+                    <input type="text" id="apellido" name="apellido" placeholder="Toscano Coro" style="width:95%; padding:6px;">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="edad">Edad</label><br>
+                    <input type="number" id="edad" name="edad" placeholder="20" style="width:95%; padding:6px;">
+                </th>
+
+                <th>
+                    <label for="direccion">Dirección Domiciliaria</label><br>
+                    <input type="text" id="direccion" name="direccion" placeholder="Quito - Yaruquí" style="width:95%; padding:6px;">
+                </th>
+
+                <th>
+                    <label for="email">Correo Electrónico</label><br>
+                    <input type="email" id="email" name="email" placeholder="damiantoscano101@gmail.com" value="email@ejemplo.com" required style="width:95%; padding:6px;">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="3">
+                    <label for="fecha">Fecha</label><br>
+                    <input type="date" id="fecha" name="fecha" 
+                           value="2025-10-24" 
+                           min="2025-10-24" 
+                           max="2025-10-31"
+                           style="width:50%; padding:6px;">
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="3" style="text-align:center;">
+                    <label>¿Discapacidad?</label><br>
+                    <input type="radio" name="discapacidad" id="si" value="si">
+                    <label for="si">Sí</label>
+                    <input type="radio" name="discapacidad" id="no" value="no">
+                    <label for="no">No</label>
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="3" style="text-align:center; padding-top:15px;">
+                    <input type="submit" id="Enviar" value="Enviar" >
+                           
+                    <input type="reset" id="Salir" value="Salir" >
+                </th>
+            </tr>
+        </table>
+    </form>
+</main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>

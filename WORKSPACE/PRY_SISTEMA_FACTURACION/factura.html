@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura Farmacia Sana Sana</title>
+</head>
+<body>
+    <header>
+        <h1>FACTURA - FARMACIA SANA SANA</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDWbIT_iEEF74vF6s5OgoVFnzh6OEminpKg&s" alt="No hay imagen" height="30%">
+    </header>
+
+    <main>
+        <form action="servidor.html" method="get">
+
+            <!-- DATOS DE LA FARMACIA Y CLIENTE -->
+            <table border="1">
+                <tr>
+                    <td>
+                        <strong>Farmacia Sana Sana</strong><br>
+                        <label for="ruc_farmacia">RUC: </label>
+                        <input type="text" id="ruc_farmacia" name="ruc_farmacia" placeholder="1799999999001"><br>
+                        <label for="direccion_farmacia">Dirección: </label>
+                        <input type="text" id="direccion_farmacia" name="direccion_farmacia" placeholder="Av. Amazonas y Colón, Quito"><br>
+                        <label for="telefono_farmacia">Teléfono: </label>
+                        <input type="text" id="telefono_farmacia" name="telefono_farmacia" placeholder="(02) 245-6789">
+                        <br><br>
+                        <label for="num_factura">Factura N°: </label>
+                        <input type="text" id="num_factura" name="num_factura" placeholder="001-000123">
+                    </td>
+
+                    <td>
+                        <strong>Cliente</strong><br>
+                        <label for="nombre_cliente">Nombre: </label>
+                        <input type="text" id="nombre_cliente" name="nombre_cliente" placeholder="Juan Pérez"><br>
+                        <label for="cedula_cliente">Cédula/RUC: </label>
+                        <input type="text" id="cedula_cliente" name="cedula_cliente" placeholder="1712345678"><br>
+                        <label for="direccion_cliente">Dirección: </label>
+                        <input type="text" id="direccion_cliente" name="direccion_cliente" placeholder="Av. 10 de Agosto y Naciones Unidas"><br>
+                        <label for="fecha_factura">Fecha: </label>
+                        <input type="date" id="fecha_factura" name="fecha_factura">
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!-- DETALLE DE PRODUCTOS -->
+            <table border="1">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio Unitario ($)</th>
+                    <th>% Descuento</th>
+                    <th>Precio Neto ($)</th>
+                    <th>Cantidad</th>
+                    <th>Importe ($)</th>
+                    <th>IVA (%)</th>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="producto1" placeholder="Paracetamol 500mg"></td>
+                    <td><input type="number" name="pvp1" step="0.01" placeholder="2.50"></td>
+                    <td><input type="number" name="descuento1" step="1" placeholder="0"></td>
+                    <td><input type="number" name="neto1" step="0.01" placeholder="2.50"></td>
+                    <td><input type="number" name="cantidad1" placeholder="1"></td>
+                    <td><input type="number" name="importe1" step="0.01" placeholder="2.50"></td>
+                    <td><input type="number" name="iva1" placeholder="12"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="text" name="producto2" placeholder="Ibuprofeno 400mg"></td>
+                    <td><input type="number" name="pvp2" step="0.01" placeholder="3.00"></td>
+                    <td><input type="number" name="descuento2" step="1" placeholder="0"></td>
+                    <td><input type="number" name="neto2" step="0.01" placeholder="3.00"></td>
+                    <td><input type="number" name="cantidad2" placeholder="2"></td>
+                    <td><input type="number" name="importe2" step="0.01" placeholder="6.00"></td>
+                    <td><input type="number" name="iva2" placeholder="12"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!-- TOTAL -->
+            <h2>
+                <label for="total_factura">TOTAL FACTURA: </label>
+                <input type="number" id="total_factura" name="total_factura" step="0.01" placeholder="8.50"> USD
+            </h2>
+
+            <!-- RESUMEN IVA -->
+            <table border="1">
+                <tr>
+                    <th>Base Imponible ($)</th>
+                    <th>% IVA</th>
+                    <th>Valor IVA ($)</th>
+                </tr>
+                <tr>
+                    <td><input type="number" name="base_imponible" step="0.01" placeholder="7.59"></td>
+                    <td><input type="number" name="porcentaje_iva" placeholder="12"></td>
+                    <td><input type="number" name="valor_iva" step="0.01" placeholder="0.91"></td>
+                </tr>
+            </table>
+
+            <br>
+
+            <!-- FORMA DE PAGO -->
+            <label for="forma_pago"><b>Forma de pago:</b></label>
+            <select name="forma_pago" id="forma_pago" required>
+                <option value="">Seleccione...</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="tarjeta">Tarjeta de crédito/débito</option>
+                <option value="transferencia">Transferencia bancaria</option>
+            </select>
+
+            <br><br>
+
+            <label for="cuenta_banco"><b>Cta. bancaria (Sana Sana):</b></label>
+            <input type="text" id="cuenta_banco" name="cuenta_banco" value="Banco Pichincha - 2101234567" readonly>
+
+            <br><br>
+
+            <!-- BOTONES -->
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar Factura">
+        </form>
+    </main>
+
+    <footer>
+        <p>Gracias por preferir <b>Farmacia Sana Sana</b>. ¡Le deseamos buena salud!</p>
+    </footer>
+</body>
+</html>

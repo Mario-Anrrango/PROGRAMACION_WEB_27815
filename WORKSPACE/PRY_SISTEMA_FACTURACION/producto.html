@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTO(FACTURA)</title>
+</head>
+<body>
+    <h1>PRODUCTOS SANA SANA COLITA DE RANA</h1>
+    <form action="factura.html" method="get">
+        <table>
+        <table border="2">
+        <thead>
+            <tr>
+                    <th>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuDWbIT_iEEF74vF6s5OgoVFnzh6OEminpKg&s" alt="Imagen no encontrada" height="30%" width="30%">
+                    </th>
+                    <th>
+                        MINISTERIO DE SALUD DEL ECUADOR
+                    </th>
+                    <th>
+                        VERSION DEL RECIBO DEL PRODUCTO 1.O
+                    </th>
+                    
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td colspan="3">
+                    SOLICITUD DEL REGISTRO SANITARIO
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nuevo_registro_sanitario">Nuevo registro Sanitario</label>
+                    <input
+                    type="checkbox"
+                    name="nuevo_registro_sanitario"
+                    id="nuevo_registro_sanitario"
+                    >
+                    <br>
+                    <label for="registro_sanitario_existente">Registro Sanitario Existente</label>
+                    <input
+                    type="checkbox"
+                    name="registro_sanitario_existente"
+                    id="registro_sanitario_existente"
+                    checked>
+                </td>
+                <td>
+                    <label for="producto_del_estado">Otorgado por el estado</label>
+                    <input
+                    type="checkbox"
+                    name="producto_del_estado"
+                    id="producto_del_estado">
+                    <br>
+                    <label for="producto_privado">Producto farmaceutico privado</label>
+                    <input
+                    type="checkbox"
+                    name="producto_privado"
+                    id="producto_privado"
+                    checked>
+                </td>
+                <td>
+                    <label for="farmacia_extranjera">Farmacia extranejra</label>
+                    <input
+                    type="checkbox"
+                    name="farmacia_extranjera"
+                    id="farmacia_extranjera"
+                    checked>
+                    <br>
+                    <label for="farmacia_nacional">Farmacia Nacional</label>
+                    <input
+                    type="checkbox"
+                    name="farmacia_nacional"
+                    id="farmacia_nacional"
+                    >
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                     DATOS DE LA FACTURA
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nombre_producto">Nombre del producto: </label>
+                    <input
+                    type="text"
+                    name="nombre_producto"
+                    id="nombre_producto"
+                    placeholder="Paracetamol"
+                    value="Paracetamol"
+                    required>
+                    <br>
+                    <label for="cantidad">Cantidad de medicamento: </label>
+                    <input
+                    type="number"
+                    name="cantidad"
+                    id="cantidad"
+                    placeholder="5"
+                    max="100"
+                    min="1"
+                    value="5"
+                    required
+                    >
+                    <br>
+                <label for="fecha_vencimiento">INngrese la fecha de vencimiento: </label>
+                <input
+                type="date"
+                name="fecha_vencimiento"
+                id="fecha_vencimiento"
+                value="2025-10-22"
+                min="2025-10-10"
+                max="2025-10-30">
+                <br>
+                <label for="fecha_elaboracion">Ingrese la fecha de elaboracion: </label>
+                <input
+                type="date"
+                name="fecha_elaboracion"
+                id="fecha_elaboracion"
+                value="2025-10-22"
+                min="2025-10-10"
+                max="2025-10-30">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <input type="submit" value="Enviar producto">
+                </td>
+                
+            </tr>
+            
+        </tfoot>
+    </table>
+    </form>
+</body>
+</html>
