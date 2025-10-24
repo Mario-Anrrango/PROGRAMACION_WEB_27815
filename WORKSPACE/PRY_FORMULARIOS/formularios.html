@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIOS</title>
+</head>
+<body>
+    <header>
+        <h1>INGRESAR DATOS DEL ESTUDIANTE</h1>
+    </header>
+    <main>
+       <form action="server.php" method="post">
+            <label for="nombres">INGRESE SUS NOMBRES</label>
+            <input
+                type="text"
+                name="nombres"
+                id="nombres"
+                placeholder="Mario Santiago"
+                autofocus
+                minlength="5"
+                required
+                >
+            <br>
+            <label for="apellidos">INGRESE SU APELLIDO</label>
+            <input
+                type="text"
+                name="apellidos"
+                id="apellidos"
+                placeholder="Anrrango Benavides"
+                minlength="5"
+                required
+                >
+            <br>
+            <label for="email">INGRESE SU EMAIL</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="ejemplo@espe.edu.ec"
+                required>
+            <br>
+            <label for="edad">INGRESE SU EDAD</label>
+            <input
+                type="number"
+                name="number"
+                id="number"
+                placeholder="21"
+                max="50"
+                min="15"
+                value="15"
+                required
+                >
+            <br>
+            <label for="fecha_nacimiento">INGRESE SU FECHA DE NACIMIENTO</label>
+            <input
+                type="date"
+                name="fecha_nacimiento"
+                id="fecha_nacimiento"
+                value="2025-10-22"
+                min="2025-10-10"
+                max="2025-10-30">
+            <br>
+            <br>
+            <label for="">SELECCIONE SU SEXO</label>
+            <br>
+            <label for="hombre">HOMBRE</label>
+            <input
+                type="radio"
+                name="sexo"
+                id="hombre"
+                checked>
+            <br>
+            <label for="mujer">MUJER</label>
+            <input
+                type="radio"
+                name="sexo"
+                id="mujer">
+            <br>
+            <br>
+            <label for="">Día de clases de Programació Web:</label>
+            <br>
+            <label for="lunes">LUNES</label>
+            <input
+                type="checkbox"
+                name="dia[]"
+                id="lunes"
+                value="lunes"
+                checked>
+            <br>
+            <label for="martes">MARTES</label>
+            <input
+                type="checkbox"
+                name="dia[]"
+                id="martes"
+                value="martes"
+                disabled>
+            <br>
+            <label for="miercoles">MIERCOLES</label>
+            <input
+                type="checkbox"
+                name="dia[]"
+                id="miercoles"
+                value="miercoles"
+                checked>
+            <br>
+            <label for="jueves">JUEVES</label>
+            <input
+                type="checkbox"
+                name="dia[]"
+                id="jueves"
+                value="jueves"
+                disabled>
+            <br>
+            <label for="viernes">VIERNES</label>
+            <input
+                type="checkbox"
+                name="dia[]"
+                id="viernes"
+                value="viernes"
+                checked>
+            <br>
+            <br>
+            <label for="foto">Cargue su foto de perfil: </label>
+            <input
+                type="file"
+                name="foto"
+                id="foto"
+                accept=".png">
+            <br>
+            <label for="color">COLOR FAVORITO</label>
+            <input
+                type="color"
+                name="color"
+                id="color">
+            <br>
+            <label for="estatura">ESTATURA: </label>
+            <input
+                type="range"
+                name="estatura"
+                id="estatura"
+                max="50"
+                value="10">
+            <br>
+            <label for="contrasenia">Contraseña: </label>
+            <input
+                type="password"
+                name="contrasenia"
+                id="contrasenia">
+            <br>
+            <label for="cedula">Busqueda por cedula: </label>
+            <input
+                type="search"
+                name="cedula"
+                id="cedula">
+            <br>
+            <br>
+            <input
+                type="reset"
+                name="limpiar"
+                id="limpiar"
+                value="LIMPIAR">
+            <br>
+            <br>
+            <input
+                type="submit"
+                name="enviar"
+                id="enviar"
+                value="ENVIAR DATOS">
+       </form> 
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
