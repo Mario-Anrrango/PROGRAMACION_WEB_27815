@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT EN FORMULARIO</title>
+</head>
+<body>
+    <header>
+        <h1>SELECT EN FORMULARIO</h1>
+    </header>
+
+    <main>
+        <form action="server.html" method=get>
+
+            <label for="Ingrese su ID. ejml LID4545">Ingrese su ID:</label>
+            <input type="text" name="id" id="id" placeholder="Ingrese su ID:" pattern="[A-Z]{3}[0-9]{4}" required>
+
+            <br>
+
+            <!-- SELECT EN FORM -->
+            <label for="lista_frutas">LISTA DE FRUTAS</label>
+            <input type="hidden" value="1726192619" name="cedula_usuario">
+            <select
+            name="lista_frutas" 
+            id="lista_frutas"
+            required
+            autofocus
+            >
+                <option value=""></option>
+                <option value="naranja" selected>NARANJA</option>
+                <option value="uva">UVA</option>
+                <option value="zapatos" disabled>ZAPATOS</option>
+                <option value="pera">PERA</option>
+            </select>
+
+            <br>
+            <label for="musicas_favoritas">SELECCIONE SUS MUSICAS FAVORITAS</label>
+            <select name="mis_musicas_favoritas[]" id="musicas_favoritas" multiple required size="5">
+                <option value="" disabled></option>
+                <optgroup title="MUSICA REGGAETON" label="MUSICA REGGAETON">
+                    <option value="LOBA_SHAKIRA" selected>LOBA DE SHAKIRA</option>
+                    <option value="ANOCHE" disabled> ANOCHE DE BAD BUNNY</option>
+                    <option value="AVENTURA" selected>INFIELES DE AVENTURA</option>
+                </optgroup>
+                
+                <optgroup title="MUSICA DE DAFT PUNK" label="MUSICA DE DAFT PUNK">
+                    <option value="ONE_MORE_TIME">ONE MORE TIME DE DAFT PUNK</option>
+                    <option value="VERIDIS_QUO">VERIDIS QUO DE DAFT PUNK</option>
+                </optgroup>
+                
+            </select>
+
+            <br>
+
+            <!-- TEXT AREA -->
+             <label for="descripcion">INGRESE SU DESCRIPCION</label>
+            <textarea name="descripcion" id="descripcion" required rows="5" cols="50">HOLA A TODOS</textarea>
+            <br>
+
+            <button type="submit">ENVIAR AL SERVIDOR</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>c 2025</p>
+    </footer>
+</body>
+</html>
