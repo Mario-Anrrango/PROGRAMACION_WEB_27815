@@ -1,0 +1,49 @@
+
+input[type="text"] {
+    background-color: #f7ff00;
+    border: 3px solid #34495e;
+    color: #34495e;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+textarea {
+    background-color: #ecf0f1;
+    border: none;
+    border-bottom: 5px solid #e74c3c;
+    font-weight: bold;
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+select[multiple] {
+    background-color: #3498db;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    line-height: 2;
+}
+
+input[type="checkbox"] {
+    transform: scale(2.0);
+    cursor: pointer;
+    margin-right: 15px;
+    background-color: #e74c3c;
+    border: 3px solid #34495e;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #2ecc71;
+}
+
+input[type="radio"] {
+    transform: scale(1.8);
+    cursor: pointer;
+    border: 3px solid #f39c12;
+    background-color: #34495e;
+    margin-right: 12px;
+}
+
+input[type="radio"]:checked {
+    accent-color: #e67e22;
+}

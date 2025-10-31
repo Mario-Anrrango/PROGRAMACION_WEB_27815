@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FORMULARIO EXTERNO</title>
+    <link rel="stylesheet" href="../public/css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>FORMULARIO CON CSS EXTERNO</h1>
+    </header>
+    <main>
+        <hr>
+        <h2>Gustos musicales:</h2>
+        <form action="server2.html" method=get>
+            <label for="nombre_artista_musical_favorito">Ingrese su el nombre de su artista musical favorito: </label>
+            <input
+            type="text"
+            name="nombre_artista_musical_favorito"
+            required
+            >
+            <br><br>
+            <label for="motivo_por_el_cual_le_gusta_ese_artista">Indique el motivo por el cual le gusta ese artista: </label>
+            <br>
+            <textarea
+            name="motivo_por_el_cual_le_gusta_ese_artista"
+            id="motivo_por_el_cual_le_gusta_ese_artista"
+            cols="50"
+            rows="5"
+            required
+            >
+            </textarea>
+            <br>
+            <label for="otros_generos">Escoga otros generos musicales de su agrado:</label>
+            <br>
+            <select
+            name="otros_generos[]"
+            id="otros_generos"
+            multiple
+            size="3"
+            required
+            >
+                <option value=""disabled></option>
+                <option value="POP">POP</option>
+                <option value="ROCK">ROCK</option>
+                <option value="ELECTRONICA">ELECTRÓNICA</option>
+                <option value="BACHATA">BACHATA</option>
+                <option value="CUMBIA">CUMBIA</option>
+                <option value="ROCK'N ROLL">ROCK'N ROLL</option>
+                <option value="OTROS">OTROS</option>
+            </select>
+            <br>
+            <br>
+            <label for="">Escoja los artistas que conozca,si no conoce ninguno deje en blanco: </label>
+            <br>
+            <label for="BAD_BUNNY">BAD BUNNY</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="BAD_BUNNY"
+            >
+            <br>
+            <label for="REIK">REIK</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="REIK"
+            >
+            <br>
+            <label for="LUIS_MIGUEL">LUIS MIGUEL</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="LUIS_MIGUEL"
+            >
+            <br>
+            <label for="JULIO_JARAMILLO">JULIO JARAMILLO</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="JULIO_JARAMILLO"
+            >
+            <br><br>
+            <label for="eleccion_de_gusto">¿Usted disfruta de la música?</label>
+            <br>
+            <label for="si">Sí</label>
+            <input
+            type="radio"
+            name="respuesta"
+            id="si"
+            checked
+            >
+            <br>
+            <label for="no">No</label>
+            <input
+            type="radio"
+            name="respuesta"
+            id="no"
+            >
+
+            <br>
+            <button type="submit">ENVIAR FORMULARIO</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

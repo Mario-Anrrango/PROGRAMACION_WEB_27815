@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO INTERNO CON CSS</title>
+    <style>
+        .generos-musicales,
+        ::picker(select){
+            background-color: pink;
+        }
+
+        .texto-personalizado{
+            color: white;
+        }
+
+        #motivo_por_el_cual_le_gusta_ese_artista{
+            text-align: right;
+        }
+
+        [type="checkbox"] {
+        accent-color: yellow;
+        }
+
+        [type="radio"]{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CSS EN FORMULARIOS</h1>
+    </header>
+
+    <main>
+        <form action="server.html" method=get>
+            <label for="nombre_artista_musical_favorito">Ingrese su el nombre de su artista musical favorito: </label>
+            <input
+            type="text"
+            name="nombre_artista_musical_favorito"
+            required
+            style="background-color: black;"
+            class="texto-personalizado"
+            >
+            <br><br>
+            <label for="motivo_por_el_cual_le_gusta_ese_artista">Indique el motivo por el cual le gusta ese artista: </label>
+            <br>
+            <textarea
+            name="motivo_por_el_cual_le_gusta_ese_artista"
+            id="motivo_por_el_cual_le_gusta_ese_artista"
+            cols="50"
+            rows="5"
+            required
+            style="border-width: 3px 5px;"
+            >
+            </textarea>
+            <br>
+            <label for="otros_generos">Escoga otros generos musicales de su agrado:</label>
+            <br>
+            <select
+            name="otros_generos[]"
+            id="otros_generos"
+            multiple
+            size="3"
+            required
+            style="color:green;"
+            class="generos-musicales"
+            >
+                <option value=""disabled></option>
+                <option value="POP">POP</option>
+                <option value="ROCK">ROCK</option>
+                <option value="ELECTRONICA">ELECTRÓNICA</option>
+                <option value="BACHATA">BACHATA</option>
+                <option value="CUMBIA">CUMBIA</option>
+                <option value="ROCK'N ROLL">ROCK'N ROLL</option>
+                <option value="OTROS">OTROS</option>
+            </select>
+            <br>
+            <br>
+            <label for="">Escoja los artistas que conozca,si no conoce ninguno deje en blanco: </label>
+            <br>
+            <label for="BAD_BUNNY">BAD BUNNY</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="BAD_BUNNY"
+            style="opacity: 0.3;"
+            >
+            <br>
+            <label for="REIK">REIK</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="REIK"
+            style="opacity: 0.3;"
+            >
+            <br>
+            <label for="LUIS_MIGUEL">LUIS MIGUEL</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="LUIS_MIGUEL"
+            style="opacity: 0.3;"
+            >
+            <br>
+            <label for="JULIO_JARAMILLO">JULIO JARAMILLO</label>
+            <input
+            type="checkbox"
+            name="artista[]"
+            id="JULIO_JARAMILLO"
+            style="opacity: 0.3;"
+            >
+            <br><br>
+            <label for="eleccion_de_gusto">¿Usted disfruta de la música?</label>
+            <br>
+            <label for="si">Sí</label>
+            <input
+            type="radio"
+            name="respuesta"
+            id="si"
+            checked
+            style="accent-color: green;"
+            >
+            <br>
+            <label for="no">No</label>
+            <input
+            type="radio"
+            name="respuesta"
+            id="no"
+            style="accent-color:red;">
+
+            <br>
+            <button type="submit">ENVIAR FORMULARIO</button>
+        </form>
+        
+    </main>
+
+    <footer>
+        <p>c 2025</p>
+    </footer>
+</body>
+</html>
