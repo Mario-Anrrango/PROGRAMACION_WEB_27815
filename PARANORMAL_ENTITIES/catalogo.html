@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Entidades - PARANORMAL ACTIVITY</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+    
+    <!-- Carga de Bootstrap 5 CSS -->
+    <link href="./public/vendor/bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./public/css/styles.css">
+</head>
+<body>
+    <!-- HEADER SEMÁNTICO: Navbar (100% Bootstrap) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container-fluid max-w-7xl mx-auto px-4">
+                <a class="navbar-brand text-custom-accent fw-bold fs-4" href="index.html" style="letter-spacing: 0.1em;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-inline-block align-text-top me-1"><path d="m12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 9 0V4a3 3 0 0 0-3-3Z"/><path d="M10 12h4"/><path d="M12 21c3.6 0 6.6-2 9-5H3c2.4 3 5.4 5 9 5Z"/></svg>
+                    PARANORMAL ACTIVITY
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 px-3 py-2 transition duration-200 font-medium text-sm" href="index.html">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 px-3 py-2 transition duration-200 font-medium text-sm active" aria-current="page" href="catalogo.html">CATÁLOGO DE ENTIDADES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 px-3 py-2 transition duration-200 font-medium text-sm" href="contacto.html">REPORTAR AVISTAMIENTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN SEMÁNTICO: Contenido Principal de la Página -->
+    <main class="container max-w-7xl mx-auto p-4 p-lg-5">
+        
+        <h1 class="display-5 fw-extrabold text-white mb-4 pb-2 border-bottom border-danger opacity-50">Catálogo de Entidades y Archivos</h1>
+
+        <div class="row g-4 mb-5">
+            <!-- Columna para Filtros y Listas Anidadas -->
+            <div class="col-lg-3">
+                <div class="bg-custom-card p-4 rounded-3 shadow-lg mb-4">
+                    <h2 class="fs-5 fw-bold text-custom-accent mb-3">Filtros de Búsqueda</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label for="tipoFiltro" class="form-label text-white">Tipo de Fenómeno</label>
+                            <select id="tipoFiltro" class="form-select">
+                                <option selected>Todos</option>
+                                <option>Fantasmas / Poltergeist</option>
+                                <option>Criaturas Criptozoológicas</option>
+                                <option>Extraterrestres / OVNI</option>
+                                <option>Teorías de Conspiración</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ubicacionFiltro" class="form-label text-white">Ubicación Reportada</label>
+                            <input type="text" class="form-control" id="ubicacionFiltro" placeholder="Ej: Londres">
+                        </div>
+                        <div class="mb-3">
+                            <label for="peligroFiltro" class="form-label text-white">Nivel de Peligrosidad (Mín.)</label>
+                            <input type="number" class="form-control" id="peligroFiltro" min="1" max="10" value="1">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 fw-bold">Buscar Archivos</button>
+                    </form>
+                </div>
+
+                <!-- Listas Anidadas (Clasificación Jerárquica) -->
+                <div class="bg-custom-card p-4 rounded-3 shadow-lg">
+                    <h2 class="fs-5 fw-bold text-custom-accent mb-3">Clasificación de Fenómenos</h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <strong class="text-white">Paranormal</strong>
+                            <ul class="list-unstyled ms-3">
+                                <li>
+                                    <strong class="text-secondary">Fantasmas y Espectros</strong>
+                                    <ul class="list-unstyled ms-3">
+                                        <li class="text-white-50">- Apariciones Residuales</li>
+                                        <li class="text-white-50">- Poltergeists (Espíritus Ruidosos)</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong class="text-secondary">Criptozoología</strong>
+                                    <ul class="list-unstyled ms-3">
+                                        <li class="text-white-50">- Hominoides (Bigfoot, Yeti)</li>
+                                        <li class="text-white-50">- Marinos (Monstruo del Lago Ness)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong class="text-white">OVNIs y Extraterrestres</strong></li>
+                        <li><strong class="text-white">Conspiraciones y Secretos</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Columna para la Tabla de Entidades -->
+            <div class="col-lg-9">
+                <div class="bg-custom-card p-4 rounded-3 shadow-lg overflow-auto">
+                    <h2 class="fs-4 fw-bold text-white mb-3">Tabla de Entidades Principales</h2>
+                    
+                    <table class="table table-striped table-custom caption-top">
+                        <caption>*Los datos reflejan los últimos 5 años de reportes confirmados.</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-custom-accent">Entidad</th>
+                                <th scope="col" class="text-custom-accent">Tipo</th>
+                                <th scope="col" class="text-custom-accent">Ubicación Clave</th>
+                                <th scope="col" class="text-custom-accent">Peligrosidad (1-10)</th>
+                                <th scope="col" class="text-custom-accent">Evidencia EVP (Audio)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Fila 1: Fantasma -->
+                            <tr>
+                                <th scope="row">La Dama de Gris</th>
+                                <td>Aparición Residual</td>
+                                <td>Castillo de York, UK</td>
+                                <td class="text-success">2 (Baja)</td>
+                                <td><a href="#audio-placeholder" class="text-info">Escuchar</a></td>
+                            </tr>
+                            <!-- Fila 2: Poltergeist -->
+                            <tr>
+                                <th scope="row">Poltergeist de Enfield</th>
+                                <td>Poltergeist</td>
+                                <td>Enfield, Londres</td>
+                                <td class="text-warning">7 (Moderada)</td>
+                                <td><a href="#audio-placeholder" class="text-info">Escuchar</a></td>
+                            </tr>
+                            <!-- Fila 3: Extraterrestre -->
+                            <tr>
+                                <th scope="row">Grises (Reptilianos)</th>
+                                <td>Extraterrestre</td>
+                                <td>Roswell, Nuevo México, US</td>
+                                <td class="text-danger">9 (Extrema)</td>
+                                <td>N/A</td>
+                            </tr>
+                            <!-- Fila 4: Críptido -->
+                            <tr>
+                                <th scope="row">Yeti (Abominable Snowman)</th>
+                                <td>Criptozoológica</td>
+                                <td>Himalayas, Asia</td>
+                                <td class="text-success">4 (Baja)</td>
+                                <td>N/A</td>
+                            </tr>
+                            <!-- Fila 5: Demoníaca -->
+                            <tr>
+                                <th scope="row">Demonio de Jersey</th>
+                                <td>Demoníaca</td>
+                                <td>Pine Barrens, New Jersey, US</td>
+                                <td class="text-danger">8 (Alta)</td>
+                                <td>N/A</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="fw-bold">Total de Entidades Documentadas:</td>
+                                <td colspan="2" class="fw-bold">256 (38 activas)</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    
+                    <!-- Placeholder para Audio (EVP) -->
+                    <div id="audio-placeholder" class="mt-4 p-3 bg-custom-dark rounded-3 border border-secondary border-opacity-10">
+                        <h4 class="fs-6 text-custom-accent mb-2">Evidencia de Voz Electrónica (EVP)</h4>
+                        <p class="text-white-50 small">Simulación de grabación de audio (La Dama de Gris):</p>
+                        <audio controls class="w-100" style="filter: invert(1) hue-rotate(180deg);">
+                            <source src="placeholder.wav" type="audio/wav">
+                            Su navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER SEMÁNTICO -->
+    <footer class="bg-custom-card mt-5 py-4">
+        <div class="container max-w-7xl mx-auto text-center text-secondary text-sm">
+            <p>&copy; 2025 Paranormal Lore Archive. Todos los derechos reservados. | Proyecto Educativo para el desarrollo web.</p>
+        </div>
+    </footer>
+
+    <!-- Carga de Bootstrap JS -->
+    <script src="./public/vendor/bootstrap-5/js/bootstrap.min.js"></script>
+</body>
+</html>

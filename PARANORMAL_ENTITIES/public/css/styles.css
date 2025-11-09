@@ -1,0 +1,145 @@
+:root {
+            
+            --bs-body-bg: #0f172a; /* dark-bg */
+            --bs-body-color: #e2e8f0; /* gray-200 */
+            --bs-secondary-bg: #1e293b; /* dark-card */
+            --bs-primary: #ef4444; /* primary-accent (Rojo oscuro) */
+            --bs-primary-rgb: 239, 68, 68;
+            --bs-light-rgb: 226, 232, 240;
+        }
+
+        body {
+            background-color: var(--bs-body-bg);
+            color: var(--bs-body-color);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Clases personalizadas para el Navbar, Cards y Backgrounds oscuros */
+        .bg-custom-dark {
+            background-color: var(--bs-body-bg) !important;
+        }
+        .bg-custom-card {
+            background-color: var(--bs-secondary-bg) !important;
+        }
+        .text-custom-accent {
+            color: var(--bs-primary) !important;
+        }
+
+        /* Navbar estilo oscuro y compacto */
+        .navbar-custom {
+            padding-top: 0.5rem; /* py-2 */
+            padding-bottom: 0.5rem; /* py-2 */
+            box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.1), 0 4px 6px -2px rgba(239, 68, 68, 0.05); 
+            border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+            background-color: var(--bs-secondary-bg);
+            position: sticky;
+            top: 0;
+            z-index: 1030; /* Z-index de Navbar de Bootstrap */
+        }
+        .nav-link:hover {
+            background-color: rgba(239, 68, 68, 0.1); /* hover:bg-primary-accent/10 */
+            border-radius: 0.5rem;
+        }
+
+
+
+        /* Formulario Input Styles */
+        .form-control, .form-select, .form-check-input {
+            background-color: var(--bs-secondary-bg);
+            color: var(--bs-body-color);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        .form-control:focus, .form-select:focus, .form-check-input:focus {
+            background-color: var(--bs-secondary-bg);
+            color: var(--bs-body-color);
+            border-color: var(--bs-primary);
+            box-shadow: 0 0 0 0.25rem rgba(239, 68, 68, 0.25);
+        }
+        .form-check-input:checked {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        .btn-primary {
+            --bs-btn-bg: var(--bs-primary);
+            --bs-btn-border-color: var(--bs-primary);
+            --bs-btn-hover-bg: #c82333; /* Un rojo un poco más oscuro */
+            --bs-btn-hover-border-color: #c82333;
+        }
+        .modal-content {
+            background-color: var(--bs-secondary-bg);
+            color: var(--bs-body-color);
+            border: 1px solid var(--bs-primary);
+        }
+        .modal-header {
+            border-bottom: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        /* Estilo para la Tabla */
+        .table-custom {
+            --bs-table-bg: var(--bs-secondary-bg);
+            --bs-table-border-color: rgba(239, 68, 68, 0.1);
+            --bs-table-striped-bg: rgba(239, 68, 68, 0.05);
+            color: var(--bs-body-color);
+        }
+        .table-custom thead {
+            border-bottom: 2px solid var(--bs-primary);
+        }
+        .table-custom tfoot {
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+        .form-control, .form-select {
+            background-color: var(--bs-secondary-bg);
+            color: var(--bs-body-color);
+            border-color: rgba(239, 68, 68, 0.3);
+        }
+        .form-control:focus, .form-select:focus {
+            background-color: var(--bs-secondary-bg);
+            color: var(--bs-body-color);
+            border-color: var(--bs-primary);
+            box-shadow: 0 0 0 0.25rem rgba(239, 68, 68, 0.25);
+        }
+
+        .nav-link:hover {
+            background-color: rgba(239, 68, 68, 0.1); /* hover:bg-primary-accent/10 */
+            border-radius: 0.5rem;
+        }
+        
+        /* --- ESTILOS PARA EL EFECTO HOVER DEL CARRUSEL --- */
+        .carousel-item {
+            position: relative; /* Esencial para el overlay */
+        }
+        
+        /* Overlay que contiene la descripción central (inicialmente invisible) */
+        .carousel-item-hover-area {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0; /* Oculto */
+            transition: opacity 0.4s ease-in-out;
+            cursor: pointer;
+            text-align: center;
+            z-index: 5; 
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+            border-radius: 0.3rem; /* Coincide con el redondeo del carrusel */
+        }
+
+        /* Efecto en la imagen (transición suave para filtro y escala) */
+        .carousel-item img {
+            transition: filter 0.4s ease-in-out, transform 0.4s ease-in-out;
+            filter: brightness(1);
+        }
+
+        /* ESTADO HOVER: Muestra el área de descripción y cambia la imagen */
+        .carousel-item:hover .carousel-item-hover-area {
+            opacity: 1; /* Muestra el overlay */
+        }
+        .carousel-item:hover img {
+            filter: brightness(0.4); /* Opacidad/Atenuación */
+            transform: scale(1.02); /* Ligero zoom */
+        }
