@@ -57,3 +57,16 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+            function fn_loadPage(event, url) {
+                event.preventDefault();
+                
+                const main = document.getElementById('main-content');
+                fetch(url)
+                .then(response => response.text())
+                .then(request => main.innerHTML = request)
+
+            }
+
+            //llamar metodo cuando inicia la pagina
+            fn_loadPage(new Event('load'),"./views/home.html");

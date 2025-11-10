@@ -76,6 +76,12 @@
         }
 
         /* Estilo para la Tabla */
+
+        .table-custom th,
+        .table-custom td {
+            border-color: rgba(255, 255, 255, 0.08); /* Líneas de división más suaves */
+            color: var(--bs-body-color); /* Texto de la tabla en blanco/gris claro */
+        }
         .table-custom {
             --bs-table-bg: var(--bs-secondary-bg);
             --bs-table-border-color: rgba(239, 68, 68, 0.1);
