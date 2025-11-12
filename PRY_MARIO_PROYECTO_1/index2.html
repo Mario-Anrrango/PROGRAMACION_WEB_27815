@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta del Parque Tecnológico</title>
+  <link rel="stylesheet" href="./public/vendor/template/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./public/vendor/template/assets/css/poseify-style.css">
+  <!--<link rel="stylesheet" href="css/mi-estilo.css"> -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1>Encuesta del Parque Tecnológico</h1>
+      <p>¡Tu opinión nos ayuda a mejorar!</p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">ParqueTec</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Encuestas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- main content -->
+  <main class="site-main container my-5">
+    <aside class="mb-5">
+      <figure>
+        <img src="./public/vendor/template/assets/img/img_parque_tecnologico.jpg" alt="Parque Tecnológico" class="img-fluid">
+        <figcaption>Visita al Parque Tecnológico</figcaption>
+      </figure>
+    </aside>
+
+    <!-- Formulario-->
+    <section>
+      <form action="server.html" method="get">
+        <fieldset>
+          <legend>Datos personales</legend>
+
+          <div class="form-group">
+            <label for="nombre">Nombre completo:</label>
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                class="form-control"
+                pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]+"
+                title="Solo letras y espacios"
+                required
+                value="Mario Anrrango">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                class="form-control"
+                required
+                value="mario_anrrango@yahoo.com">
+          </div>
+
+          <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input
+                type="number"
+                id="edad"
+                name="edad"
+                class="form-control"
+                required
+                min="10"
+                max="100"
+                value="21">
+          </div>
+
+        </fieldset>
+        <br><br>
+        <fieldset>
+          <legend>Opinión general</legend>
+
+          <div class="form-group">
+            <label for="nivel-satisfaccion">Nivel de satisfacción:</label>
+            <input
+                type="range"
+                id="nivel-satisfaccion"
+                name="nivel-satisfaccion"
+                class="form-control"
+                min="1"
+                max="10"
+                step="1"
+                value="5"
+                oninput="document.getElementById('satValor').textContent = this.value"
+                value="3">
+            <span id="satValor">5</span>
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label for="fecha-visita">Fecha de la visita:</label>
+            <input
+                type="date" id="fecha-visita" name="fecha-visita" class="form-control"
+                id="fecha-visita"
+                name="fecha-visita"
+                class="form-control"
+                required
+                value="12/11/2025">
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label for="horaLlegada">Hora de llegada:</label>
+            <input
+                type="time"
+                id="horaLlegada"
+                name="horaLlegada"
+                class="form-control"
+                required
+                value="12:23">
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label>¿Qué te gustó más?</label><br>
+            <label><input type="checkbox" name="gustos" value="Tecnología" checked> Tecnología</label>
+            <br>
+            <label><input type="checkbox" name="gustos" value="Naturaleza" checked> Naturaleza</label>
+            <br>
+            <label><input type="checkbox" name="gustos" value="Actividades" checked> Actividades</label>
+            <br>
+            <label><input type="checkbox" name="gustos" value="Comida"> Comida</label>
+          </div>
+          <br><br>
+          <div class="form-group">
+            <label>¿Tú como visitante, recomendarías el parque?</label><br>
+            <label><input type="radio" name="recomienda" value="Sí" required aria-selected="true"> Sí</label>
+            <br>
+            <label><input type="radio" name="recomienda" value="No"> No</label>
+          </div>
+
+
+        </fieldset>
+        <br><br>
+        <fieldset>
+          <legend>Sugerencias</legend>
+
+          <div class="form-group">
+            <label for="comentario">Tu comentario:</label>
+            <textarea id="comentario" name="comentario" class="form-control"
+              maxlength="200" placeholder="Escribe tu opinión..." title="Máximo 200 caracteres"></textarea>
+          </div>
+
+        </fieldset>
+        <br><br>
+        <fieldset>
+          <legend>Verificación</legend>
+
+          <div class="form-group">
+            <label for="codigo">Código de verificación (6 números):</label>
+            <input
+                type="text"
+                id="codigo"
+                name="codigo"
+                class="form-control"
+                required
+                title="Debe contener exactamente 6 números."
+                value="qweqwe">
+          </div>
+
+        </fieldset>
+
+        <div class="form-group mt-4">
+          <button type="submit" class="btn btn-primary">Enviar encuesta</button>
+          <button type="reset" class="btn btn-secondary">Borrar todo</button>
+        </div>
+
+      </form>
+    </section>
+
+    <details class="mt-3">
+      <summary>Política de privacidad</summary>
+      <p>Los datos recogidos se usan únicamente con fines estadísticos y no se compartirán con terceros.</p>
+    </details>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>© 2025 Parque Tecnológico – Todos los derechos reservados.</p>
+      <p><a href="mailto:contacto@parquetec.com" class="text-light">Contacto</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./public/vendor/template/assets/js/main.js"></script>
+
+</body>
+</html>
